@@ -27,7 +27,13 @@ class _LoginFormState extends State<LoginForm> {
           // email
           TextFormField(
             decoration: InputDecoration(
-              prefixIcon: const Icon(Icons.person_outline_outlined),
+              prefixIcon: Padding(
+                padding: EdgeInsets.only(left: iconPadding, right: iconPadding),
+                child: Icon(
+                  Icons.email_outlined,
+                  size: iconSize,
+                ),
+              ),
               labelText: tEmail,
             ),
           ),
@@ -38,17 +44,33 @@ class _LoginFormState extends State<LoginForm> {
           TextFormField(
             obscureText: pwdVisibility,
             decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.fingerprint_outlined),
+                prefixIcon: Padding(
+                  padding:
+                      EdgeInsets.only(left: iconPadding, right: iconPadding),
+                  child: Icon(
+                    Icons.fingerprint,
+                    size: iconSize,
+                  ),
+                ),
                 labelText: "tpassword".tr,
-                suffixIcon: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        pwdVisibility = !pwdVisibility;
-                      });
-                    },
-                    icon: pwdVisibility
-                        ? const Icon(Icons.remove_red_eye_sharp)
-                        : const Icon(Icons.visibility_off))),
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: iconPadding),
+                  child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          pwdVisibility = !pwdVisibility;
+                        });
+                      },
+                      icon: pwdVisibility
+                          ? Icon(
+                              Icons.remove_red_eye_sharp,
+                              size: iconSize,
+                            )
+                          : Icon(
+                              Icons.visibility_off,
+                              size: iconSize,
+                            )),
+                )),
           ),
           SizedBox(
             height: formSpacer,
@@ -75,7 +97,7 @@ class _LoginFormState extends State<LoginForm> {
                       top: elevatedButton, bottom: elevatedButton),
                   child: Text(
                     "login".tr.toCapitalized(),
-                    // style: buttonStyle,
+                    style: buttonStyle,
                   ),
                 )),
           ),

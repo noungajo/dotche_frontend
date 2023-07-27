@@ -6,7 +6,6 @@ TextStyle titleStyle =
 TextStyle bodyStyle =
         TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
     formStyle = const TextStyle(fontFamily: "lato"),
-    buttonStyle =
-        TextStyle(fontFamily: "lato", color: Colors.white, fontSize: 11.sp),
+    buttonStyle = TextStyle(fontFamily: "lato", fontSize: 11.sp),
     linkStyle =
         TextStyle(fontFamily: "lato", color: Colors.blue, fontSize: 11.sp);

@@ -1,5 +1,4 @@
 import 'package:dotche/constants/image_path.dart';
-import 'package:dotche/constants/text_string.dart';
 import 'package:dotche/constants/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,7 +32,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SignUpFormWidget(),
                 Column(
                   children: [
-                    const Text("Or"),
+                    Text("Or", style: Theme.of(context).textTheme.bodySmall),
                     /*
 bouton du style bordure. si on veut l'icon juste .icon c'est la même chose que le textButton au lieu d'utiliser une row
                 
@@ -52,9 +51,7 @@ bouton du style bordure. si on veut l'icon juste .icon c'est la même chose que 
                           TextSpan(
                               text: "alreadyHaveAnAccount".tr,
                               style: Theme.of(context).textTheme.bodySmall),
-                          TextSpan(
-                            text: " ${"login".tr}",
-                          )
+                          TextSpan(text: " ${"login".tr}", style: linkStyle)
                         ])))
                   ],
                 )
