@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../user_management/sreens/login/login_screen.dart';
+import '../../user_management/screens/login/login_screen.dart';
 
 class TAnimationController extends GetxController {
   static TAnimationController get find => Get.find();

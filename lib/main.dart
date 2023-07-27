@@ -1,4 +1,4 @@
-import 'package:dotche/user_management/sreens/sign_up/signup_screen.dart';
+import 'package:dotche/user_management/screens/sign_up/signup_screen.dart';
 import 'package:dotche/utils/animation/animation_controller.dart';
 import 'package:dotche/utils/service/api_client.dart';
 import 'package:dotche/utils/theme/theme.dart';
@@ -8,8 +8,8 @@ import 'package:sizer/sizer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'utils/internationalisation/internationalisation.dart';
-import 'user_management/sreens/login/login_screen.dart';
-import 'user_management/sreens/ouverture.dart';
+import 'user_management/screens/login/login_screen.dart';
+import 'user_management/screens/ouverture.dart';
 
 void main() {
   // SystemChrome.setPreferredOrientations(
@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
+        debugShowCheckedModeBanner: false,
+        defaultTransition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
@@ -41,7 +44,6 @@ class MyApp extends StatelessWidget {
         fallbackLocale:
             const Locale("en", "EN"), //fallback locale if wrong local not found
         supportedLocales: const [Locale('fr'), Locale('en'), Locale('ge')],
-        debugShowCheckedModeBanner: false,
         //themeMode: ThemeMode.system,
         title: 'Dotche',
         home: Ouverture(),

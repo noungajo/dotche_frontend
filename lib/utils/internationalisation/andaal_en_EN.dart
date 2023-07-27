@@ -13,5 +13,16 @@ var andaalEn = {
   "signup_subTitle": "Create your profile to start your Journey",
   "fullname": "Fill Name",
   "tel": "Phone Number",
-  "signUp": "Sign up"
+  //OTP Sreen text
+  "otp_title": "CO\nDE",
+  "otp_subtitle": "Verification",
+  "otp_message": "Enter the verification code sent at ",
+  //forget password text
+  "forget_pwd_title": "Make Selection!",
+  "forget_pwd_subtitle":
+      "Select one of the options given below to reset your password",
+  "reset_via_email": "Reset via Mail Verification",
+  "reset_via_phone": "Reset via Phone Verification",
+  "forget_pwd_phone_subtitle": "Enter your registeed Phone No to receive OTP",
+  "forget_pwd_mail_subtitle": "Enter your registeed E-mail to receive OTP",
 };

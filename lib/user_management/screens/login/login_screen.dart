@@ -1,6 +1,6 @@
 import 'package:dotche/constants/image_path.dart';
 import 'package:dotche/constants/text_style.dart';
-import 'package:dotche/user_management/sreens/login/widget/login_form.dart';
+import 'package:dotche/user_management/screens/login/widget/login_form.dart';
 import 'package:dotche/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -73,7 +73,7 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
               child: Padding(
                 padding: EdgeInsets.only(
                     top: elevatedButton, bottom: elevatedButton),
-                child: Text("signUp".tr.toUpperCase()),
+                child: Text("sign_up".tr.toUpperCase()),
               ),
             ),
           )
