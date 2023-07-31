@@ -25,4 +25,8 @@ var andaalEn = {
   "reset_via_phone": "Reset via Phone Verification",
   "forget_pwd_phone_subtitle": "Enter your registeed Phone No to receive OTP",
   "forget_pwd_mail_subtitle": "Enter your registeed E-mail to receive OTP",
+  "forget_password_title": "Forget password",
+  "forget_password_subtitle":
+      "Select one of the options given below to reset your password",
+  "next": "Next"
 };

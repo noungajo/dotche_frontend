@@ -9,4 +9,6 @@ TextStyle bodyStyle =
     buttonStyle =
         TextStyle(fontFamily: "lato", color: Colors.white, fontSize: 11.sp),
     linkStyle =
-        TextStyle(fontFamily: "lato", color: Colors.blue, fontSize: 11.sp);
+        TextStyle(fontFamily: "lato", color: Colors.blue, fontSize: 11.sp),
+    codeTitleStyle = TextStyle(
+        fontFamily: "lato", fontSize: 50.sp, fontWeight: FontWeight.bold);

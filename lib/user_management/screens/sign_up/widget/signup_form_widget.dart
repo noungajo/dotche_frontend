@@ -69,7 +69,9 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(),
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed("/otp_screen");
+              },
               child: Padding(
                 padding: EdgeInsets.only(
                     top: elevatedButton, bottom: elevatedButton),

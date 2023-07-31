@@ -8,4 +8,5 @@ double imageHeight = 20.h,
     borderMiniCircular = 1.w,
     elevatedButton = 2.5.h,
     focusFieldWidth = 2,
-    formWidth = 30;
+    formWidth = 30,
+    otpWidth = 10.w;

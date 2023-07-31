@@ -10,8 +10,8 @@ class TTextTheme {
           color: Colors.black87),
       bodySmall:
           TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
-      titleMedium: TextStyle(
-          fontFamily: "lato", fontSize: 14.sp, color: Colors.deepPurple));
+      titleMedium:
+          TextStyle(fontFamily: "lato", fontSize: 14.sp, color: Colors.black));
   static TextTheme darktTextTheme = TextTheme(
       titleLarge: TextStyle(
           fontFamily: "loto",
