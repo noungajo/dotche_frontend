@@ -56,7 +56,46 @@ class _LoginFormState extends State<LoginForm> {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(borderMiniCircular)),
+                    builder: (context) => Container(
+                          padding: EdgeInsets.all(defaultSize),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "forget_pwd_title".tr,
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                              Text("forget_pwd_subtitle".tr,
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium),
+                              SizedBox(
+                                height: defaultSize,
+                              ),
+                              ForgetPasswordBtnWidget(
+                                icone: Icons.mail_outline_rounded,
+                                title: tEmail,
+                                subTitle: "reset_via_email".tr,
+                                onTap: () {},
+                              ),
+                              SizedBox(
+                                height: defaultSize,
+                              ),
+                              ForgetPasswordBtnWidget(
+                                icone: Icons.mobile_friendly_rounded,
+                                title: "tel".tr,
+                                subTitle: "reset_via_phone".tr,
+                                onTap: () {},
+                              ),
+                            ],
+                          ),
+                        ));
+              },
               child: Text(
                 "tLogin".tr.toTitleCase(),
                 style: linkStyle,
@@ -82,5 +121,47 @@ class _LoginFormState extends State<LoginForm> {
         ],
       ),
     ));
+  }
+}
+
+class ForgetPasswordBtnWidget extends StatelessWidget {
+  ForgetPasswordBtnWidget(
+      {super.key,
+      required this.icone,
+      required this.title,
+      required this.subTitle,
+      required this.onTap});
+  IconData icone;
+  String title;
+  String subTitle;
+  VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.all(defaultSize),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(borderMiniCircular),
+            color: Colors.green.shade200),
+        child: Row(children: [
+          Icon(
+            icone,
+            size: 60,
+          ),
+          SizedBox(
+            width: defaultSize / 2,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: Theme.of(context).textTheme.bodyMedium),
+              Text(subTitle, style: Theme.of(context).textTheme.bodySmall)
+            ],
+          ),
+        ]),
+      ),
+    );
   }
 }
