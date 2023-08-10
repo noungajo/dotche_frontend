@@ -28,5 +28,9 @@ var andaalEn = {
   "forget_password_title": "Forget password",
   "forget_password_subtitle":
       "Select one of the options given below to reset your password",
-  "next": "Next"
+  "next": "Next",
+  //forget password email
+  "forget_pwd_email_title": "Forget Password",
+  "forget_pwd_email_subTitle":
+      "Select one of the options given below to reset your password",
 };

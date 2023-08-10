@@ -1,3 +1,4 @@
+import 'package:dotche/user_management/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'package:dotche/user_management/screens/forget_password/otp_screen.dart';
 import 'package:dotche/user_management/screens/sign_up/signup_screen.dart';
 import 'package:dotche/utils/animation/animation_controller.dart';
@@ -66,6 +67,12 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: "/otp_screen",
             page: () => const OtpScreen(),
+            transition: Transition.fade,
+            transitionDuration: const Duration(milliseconds: 100),
+          ),
+          GetPage(
+            name: "/forget_pwd_mail",
+            page: () => const ForgetPasswordMailScreen(),
             transition: Transition.fade,
             transitionDuration: const Duration(milliseconds: 100),
           ),

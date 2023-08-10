@@ -12,7 +12,7 @@ class TTextTheme {
           TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
       bodyMedium: TextStyle(
         fontFamily: "lato",
-        fontSize: 11.sp,
+        fontSize: 12.sp,
         color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
@@ -28,7 +28,7 @@ class TTextTheme {
           TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.white),
       bodyMedium: TextStyle(
           fontFamily: "lato",
-          fontSize: 11.sp,
+          fontSize: 12.sp,
           color: Colors.white,
           fontWeight: FontWeight.bold),
       titleMedium: TextStyle(
