@@ -48,5 +48,7 @@ var andaalFr = {
   // Update profile screen - text
   "delete": "Delete",
   "joined": "Joined",
-  "date_of_join": "31 October 2022"
+  "date_of_join": "31 October 2022",
+  "galery": "Galerie",
+  "camera": "Caméra"
 };

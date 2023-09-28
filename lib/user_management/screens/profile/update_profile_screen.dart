@@ -1,11 +1,17 @@
+import 'dart:io';
+
 import 'package:dotche/constants/sizes.dart';
+import 'package:dotche/user_management/screens/profile/widgets/profile_menu_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/image_path.dart';
 import '../../../constants/text_string.dart';
+import 'package:gallery_saver/gallery_saver.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
   const UpdateProfileScreen({super.key});
@@ -21,8 +27,12 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     );
   }
 
+  final ImagePicker _picker = ImagePicker();
+  File? imageFile;
+  RxString lienImage = ''.obs;
   var pwdVisibility = true;
   var date = DateTime.now();
+  RxBool iPickImage = false.obs;
   @override
   Widget build(BuildContext context) {
     String dateOfJoined = DateFormat.yMMMMd('fr').format(date);
@@ -57,28 +67,88 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
               // image
               Stack(
                 children: [
-                  SizedBox(
-                    width: imageWidth * 3.5,
-                    height: imageWidth * 3.5,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: Image(image: AssetImage(defaultImageProfilePath)),
-                    ),
+                  //l'image à afficher
+                  Obx(
+                    () => iPickImage.value
+                        ? lienImage.value == ''
+                            ? SizedBox(
+                                width: imageWidth * 3.5,
+                                height: imageWidth * 3.5,
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(100),
+                                    child: FlutterLogo(size: imageWidth * 3.5)))
+                            : SizedBox(
+                                width: imageWidth * 3.5,
+                                height: imageWidth * 3.5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.file(imageFile!,
+                                      width: imageWidth * 3.5,
+                                      height: imageWidth * 3.5,
+                                      fit: BoxFit.cover),
+                                ))
+                        : SizedBox(
+                            width: imageWidth * 3.5,
+                            height: imageWidth * 3.5,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(100),
+                              child: Image(
+                                  image: AssetImage(defaultImageProfilePath)),
+                            ),
+                          ),
                   ),
                   Positioned(
                     bottom: 0,
                     right: 0,
-                    child: Container(
-                      width: defaultSize * 2,
-                      height: defaultSize * 2,
-                      decoration: BoxDecoration(
-                        color: tprimaryColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Icon(
-                        LineAwesomeIcons.camera,
-                        color: Colors.black,
-                        size: iconSize,
+                    child: InkWell(
+                      onTap: () {
+                        showModalBottomSheet(
+                          context: context,
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(borderCircular)),
+                          builder: (BuildContext context) => Container(
+                            padding: EdgeInsets.all(defaultSize),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Photo de profil".tr,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall),
+                                  SizedBox(
+                                    height: defaultSize,
+                                  ),
+                                  ProfileMenuWidget(
+                                    title: "camera".tr,
+                                    icon: LineAwesomeIcons.camera,
+                                    //textColor: Colors.red,
+                                    endIcon: false,
+                                    onPress: pickCamera,
+                                  ),
+                                  ProfileMenuWidget(
+                                    title: "galery".tr,
+                                    icon: Icons.phone,
+                                    //textColor: Colors.red,
+                                    endIcon: false,
+                                    onPress: pickImage,
+                                  ),
+                                ]),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: defaultSize * 2,
+                        height: defaultSize * 2,
+                        decoration: BoxDecoration(
+                          color: tprimaryColor,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Icon(
+                          LineAwesomeIcons.camera,
+                          color: Colors.black,
+                          size: iconSize,
+                        ),
                       ),
                     ),
                   )
@@ -168,7 +238,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                             backgroundColor: Colors.redAccent.withOpacity(0.1),
                             elevation: 0,
                             foregroundColor: Colors.red,
-                            shape: StadiumBorder(),
+                            shape: const StadiumBorder(),
                             side: BorderSide.none),
                         child: Text("delete".tr),
                       )
@@ -181,5 +251,38 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
         ),
       ),
     );
+  }
+
+  Future pickImage() async {
+    try {
+      final image = await _picker.pickImage(source: ImageSource.gallery);
+      if (image == null) return;
+      final imageTemp = File(image.path);
+      lienImage.value = imageTemp.toString();
+      Navigator.pop(context);
+      setState(() {
+        imageFile = imageTemp;
+        iPickImage.value = true;
+      });
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
+  }
+
+  Future pickCamera() async {
+    try {
+      final image = await _picker.pickImage(source: ImageSource.camera);
+      if (image == null) return;
+      final imageTemp = File(image.path);
+      GallerySaver.saveImage(image.path);
+      Navigator.pop(context);
+      lienImage.value = image.path;
+      setState(() {
+        imageFile = imageTemp;
+        iPickImage.value = true;
+      });
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
   }
 }
