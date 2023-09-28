@@ -70,7 +70,7 @@ class _LoginFormState extends State<LoginForm> {
             width: double.infinity,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(),
-                onPressed: () {},
+                onPressed: () => Get.toNamed("/profile_screen"),
                 // style: styleBoutonSuivant(
                 //     elevetadBackgroundColor, textElevatedColor),
                 child: Padding(

@@ -3,24 +3,29 @@ import 'package:sizer/sizer.dart';
 
 class TTextTheme {
   static TextTheme lightTextTheme = TextTheme(
-      titleLarge: TextStyle(
-          fontFamily: "loto",
-          fontWeight: FontWeight.bold,
-          fontSize: 15.sp,
-          color: Colors.black87),
-      bodySmall:
-          TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
-      bodyMedium: TextStyle(
+    titleLarge: TextStyle(
         fontFamily: "lato",
-        fontSize: 12.sp,
-        color: Colors.black,
         fontWeight: FontWeight.bold,
-      ),
-      titleMedium:
-          TextStyle(fontFamily: "lato", fontSize: 14.sp, color: Colors.black));
+        fontSize: 15.sp,
+        color: Colors.black87),
+    bodySmall:
+        TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
+    bodyMedium: TextStyle(
+      fontFamily: "lato",
+      fontSize: 12.sp,
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+    ),
+    titleMedium:
+        TextStyle(fontFamily: "lato", fontSize: 14.sp, color: Colors.black),
+    labelLarge:
+        TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.white),
+  );
   static TextTheme darktTextTheme = TextTheme(
+      labelLarge:
+          TextStyle(fontFamily: "lato", fontSize: 11.sp, color: Colors.black),
       titleLarge: TextStyle(
-          fontFamily: "loto",
+          fontFamily: "lato",
           fontWeight: FontWeight.bold,
           fontSize: 15.sp,
           color: Colors.white70),

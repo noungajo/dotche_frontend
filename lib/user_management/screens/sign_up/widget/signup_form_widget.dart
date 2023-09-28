@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_string.dart';
@@ -33,9 +34,10 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
+            //controller: getController.fulName,
             decoration: InputDecoration(
                 label: Text("fullname".tr),
-                prefixIcon: const Icon(Icons.person_outline_rounded)),
+                prefixIcon: const Icon(LineAwesomeIcons.user)),
           ),
           spacer(),
           TextFormField(
@@ -46,7 +48,8 @@ class _SignUpFormWidgetState extends State<SignUpFormWidget> {
           spacer(),
           TextFormField(
             decoration: InputDecoration(
-                label: Text("tel".tr), prefixIcon: const Icon(Icons.numbers)),
+                label: Text("tel".tr),
+                prefixIcon: const Icon(LineAwesomeIcons.phone)),
           ),
           spacer(),
           TextFormField(

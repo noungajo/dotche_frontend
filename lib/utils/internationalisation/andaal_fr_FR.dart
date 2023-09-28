@@ -33,4 +33,20 @@ var andaalFr = {
   "forget_pwd_email_title": "Forget Password",
   "forget_pwd_email_subTitle":
       "Select one of the options given below to reset your password",
+  // profile Screen Text
+  "title_profile": "Profile",
+  "title_edith_profile": "Edit Profile",
+  "logout_dialog_heading": "Logout",
+  "profile_heading": "Coding with T",
+  "profile_sub_heading": "superAdmin@codingwitht.com",
+  // Menu
+  "setting_text": "Settings",
+  "information_text": "Information",
+  "detail_text": "Billing Details",
+  "user_management_text": "User Management",
+  "logout": "Logout",
+  // Update profile screen - text
+  "delete": "Delete",
+  "joined": "Joined",
+  "date_of_join": "31 October 2022"
 };

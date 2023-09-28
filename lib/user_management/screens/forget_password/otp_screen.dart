@@ -5,11 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../constants/image_path.dart';
 import '../../../constants/numeric_value.dart';
-import '../../../constants/text_style.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});

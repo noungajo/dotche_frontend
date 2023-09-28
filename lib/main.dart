@@ -1,5 +1,7 @@
 import 'package:dotche/user_management/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'package:dotche/user_management/screens/forget_password/otp_screen.dart';
+import 'package:dotche/user_management/screens/profile/update_profile_screen.dart';
+import 'package:dotche/user_management/screens/profile/profile_screen.dart';
 import 'package:dotche/user_management/screens/sign_up/signup_screen.dart';
 import 'package:dotche/utils/animation/animation_controller.dart';
 import 'package:dotche/utils/service/api_client.dart';
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
         //themeMode: ThemeMode.system,
         title: 'Dotche',
         home: Ouverture(),
-        //home: const SpashScreen(),
+        // home: const ProfileScreen(),
         getPages: [
           GetPage(
             name: "/login",
@@ -73,6 +75,18 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: "/forget_pwd_mail",
             page: () => const ForgetPasswordMailScreen(),
+            transition: Transition.fade,
+            transitionDuration: const Duration(milliseconds: 100),
+          ),
+          GetPage(
+            name: "/profile_screen",
+            page: () => const ProfileScreen(),
+            transition: Transition.fade,
+            transitionDuration: const Duration(milliseconds: 100),
+          ),
+          GetPage(
+            name: "/update_profile_screen",
+            page: () => const UpdateProfileScreen(),
             transition: Transition.fade,
             transitionDuration: const Duration(milliseconds: 100),
           ),

@@ -7,6 +7,7 @@ class TTextFormFieldTheme {
   TTextFormFieldTheme._();
 
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
+      //border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
       border: const OutlineInputBorder(),
       prefixIconColor: tsecondaryColor,
       suffixIconColor: tsecondaryColor,
@@ -16,6 +17,7 @@ class TTextFormFieldTheme {
               BorderSide(width: focusFieldWidth, color: tsecondaryColor)));
 
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
+      //border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
       border: const OutlineInputBorder(),
       prefixIconColor: tprimaryColor,
       suffixIconColor: tprimaryColor,
