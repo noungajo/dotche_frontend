@@ -4,13 +4,16 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## bugg rencontré
+### bugg description
+- Unhandled Exception: PlatformException(channel-error, Unable to establish connection on channel., null, null)
+### bugg solution
 
-A few resources to get you started if this is your first Flutter project:
+```shell
+- upgrade packages
+$ flutter pub outdated
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Then upgrade the outdated packages one by one like this:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+$ flutter pub upgrade outdated_package
+```
