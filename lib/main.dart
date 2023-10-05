@@ -1,19 +1,20 @@
-import 'package:dotche/user_management/screens/forget_password/forget_password_mail/forget_password_mail.dart';
-import 'package:dotche/user_management/screens/forget_password/otp_screen.dart';
-import 'package:dotche/user_management/screens/profile/update_profile_screen.dart';
-import 'package:dotche/user_management/screens/profile/profile_screen.dart';
-import 'package:dotche/user_management/screens/sign_up/signup_screen.dart';
-import 'package:dotche/utils/animation/animation_controller.dart';
-import 'package:dotche/utils/service/api_client.dart';
-import 'package:dotche/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'utils/internationalisation/internationalisation.dart';
-import 'user_management/screens/login/login_screen.dart';
-import 'user_management/screens/ouverture.dart';
+import 'src/features/dashboard/dashboard.dart';
+import 'src/features/user_management/screens/forget_password/forget_password_mail/forget_password_mail.dart';
+import 'src/features/user_management/screens/forget_password/otp_screen.dart';
+import 'src/features/user_management/screens/login/login_screen.dart';
+import 'src/features/user_management/screens/ouverture.dart';
+import 'src/features/user_management/screens/profile/profile_screen.dart';
+import 'src/features/user_management/screens/profile/update_profile_screen.dart';
+import 'src/features/user_management/screens/sign_up/signup_screen.dart';
+import 'src/utils/animation/animation_controller.dart';
+import 'src/utils/internationalisation/internationalisation.dart';
+import 'src/utils/service/api_client.dart';
+import 'src/utils/theme/theme.dart';
 
 void main() {
   // SystemChrome.setPreferredOrientations(
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: const [Locale('fr'), Locale('en'), Locale('ge')],
         //themeMode: ThemeMode.system,
         title: 'Dotche',
-        home: Ouverture(),
+        home: Dashboard(),
         // home: const ProfileScreen(),
         getPages: [
           GetPage(
