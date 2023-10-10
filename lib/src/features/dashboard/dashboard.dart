@@ -11,6 +11,7 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
         appBar: AppBar(
           leading: const Icon(
@@ -19,7 +20,7 @@ class Dashboard extends StatelessWidget {
           ),
           title: Text(
             "dashboard_appable".tr,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: textTheme.titleMedium,
           ),
           centerTitle: true,
           elevation: 0,
@@ -30,7 +31,7 @@ class Dashboard extends StatelessWidget {
                   right: marginAppBarRight, top: marginAppBarTop),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(borderMiniCircular * 1.5),
-                  color: profileIconColorSecondarey),
+                  color: profileIconColorSecondarey.withOpacity(0.1)),
               child: IconButton(
                 onPressed: () {},
                 icon: Image(image: AssetImage(imageOuverture)),
@@ -47,11 +48,11 @@ class Dashboard extends StatelessWidget {
                 // Heading
                 Text(
                   "dashboard_title".tr,
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: textTheme.bodySmall,
                 ),
                 Text(
                   "dashboard_header".tr,
-                  style: Theme.of(context).textTheme.titleLarge,
+                  style: textTheme.titleLarge,
                 ),
                 SizedBox(
                   height: defaultSize,
@@ -82,10 +83,319 @@ class Dashboard extends StatelessWidget {
                   height: defaultSize,
                 ),
                 //Categorie
-                SizedBox()
+                SizedBox(
+                  height: 45,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      SizedBox(
+                        width: 170,
+                        height: 45,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 45,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.circular(borderMiniCircular),
+                                  color: Colors.black),
+                              child: Center(
+                                child: Text(
+                                  "JS",
+                                  style: textTheme.bodyLarge
+                                      ?.apply(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            // le flexible marche avec le overflow pour que lorsque le texte deborde ça complète par les ...
+                            Flexible(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "dashboard_banner_title_2".tr,
+                                    style: textTheme.bodyLarge,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    "dashboard_banner_subtitle".tr,
+                                    style: textTheme.bodySmall,
+                                    overflow: TextOverflow.ellipsis,
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 170,
+                        height: 45,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 45,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.circular(borderMiniCircular),
+                                  color: Colors.black),
+                              child: Center(
+                                child: Text(
+                                  "JS",
+                                  style: textTheme.bodyLarge
+                                      ?.apply(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            // le flexible marche avec le overflow pour que lorsque le texte deborde ça complète par les ...
+                            Flexible(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "dashboard_banner_title_2".tr,
+                                    style: textTheme.bodyLarge,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    "dashboard_banner_subtitle".tr,
+                                    style: textTheme.bodySmall,
+                                    overflow: TextOverflow.ellipsis,
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 170,
+                        height: 45,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 45,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.circular(borderMiniCircular),
+                                  color: Colors.black),
+                              child: Center(
+                                child: Text(
+                                  "JS",
+                                  style: textTheme.bodyLarge
+                                      ?.apply(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            // le flexible marche avec le overflow pour que lorsque le texte deborde ça complète par les ...
+                            Flexible(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "dashboard_banner_title_2".tr,
+                                    style: textTheme.bodyLarge,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    "dashboard_banner_subtitle".tr,
+                                    style: textTheme.bodySmall,
+                                    overflow: TextOverflow.ellipsis,
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 170,
+                        height: 45,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 45,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.circular(borderMiniCircular),
+                                  color: Colors.black),
+                              child: Center(
+                                child: Text(
+                                  "JS",
+                                  style: textTheme.bodyLarge
+                                      ?.apply(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            // le flexible marche avec le overflow pour que lorsque le texte deborde ça complète par les ...
+                            Flexible(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "dashboard_banner_title_2".tr,
+                                    style: textTheme.bodyLarge,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    "dashboard_banner_subtitle".tr,
+                                    style: textTheme.bodySmall,
+                                    overflow: TextOverflow.ellipsis,
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                SizedBox(
+                  height: defaultSize,
+                ),
+                //Banners
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                        child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(borderMiniCircular),
+                          color: Colors.grey.withOpacity(0.2)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Flexible(
+                                  child: Image(
+                                      width: 40,
+                                      image: AssetImage(
+                                          "assets/image/banner2.png"))),
+                              Flexible(
+                                  child: Image(
+                                      width: 100,
+                                      image: AssetImage(
+                                          "assets/image/banner1.png")))
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 25,
+                          ),
+                          Text(
+                            "dashboard_banner_title_1".tr,
+                            style: textTheme.bodyLarge,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            "dashboard_banner_subtitle".tr,
+                            style: textTheme.bodySmall,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          )
+                        ],
+                      ),
+                    )),
+                    SizedBox(
+                      width: defaultSize,
+                    ),
+                    Expanded(
+                        child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(borderMiniCircular),
+                              color: Colors.grey.withOpacity(0.2)),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Flexible(
+                                      child: Image(
+                                          width: 40,
+                                          image: AssetImage(
+                                              "assets/image/banner2.png"))),
+                                  Flexible(
+                                      child: Image(
+                                          width: 100,
+                                          image: AssetImage(
+                                              "assets/image/banner1.png")))
+                                ],
+                              ),
+                              Text(
+                                "dashboard_banner_title_2".tr,
+                                style: textTheme.bodyLarge,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              Text(
+                                "dashboard_banner_subtitle".tr,
+                                style: textTheme.bodySmall,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: OutlinedButton(
+                              onPressed: () {},
+                              child: Text("dashboard_button".tr)),
+                        )
+                      ],
+                    ))
+                  ],
+                )
+              ,  // top course
+                Text("dashboard_top_courses".tr,style: textTheme.bodyLarge?.apply(fontSizeFactor: 1.2),),//18*1.2
+                SizedBox(
+                  width: 320,
+                  height: 200,
+                  child: Container(
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(borderMiniCircular),color: ),
+                  ),
+                )
               ],
             ),
           ),
         ));
   }
 }
+//23:13
