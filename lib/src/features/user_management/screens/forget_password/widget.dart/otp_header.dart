@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_style.dart';
 
 class OtpHeader extends StatelessWidget {
@@ -19,7 +20,7 @@ class OtpHeader extends StatelessWidget {
         ),
         Text(
           subTitle,
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.titleMedium?.apply(fontSizeDelta: titleMedium),
         )
       ],
     );

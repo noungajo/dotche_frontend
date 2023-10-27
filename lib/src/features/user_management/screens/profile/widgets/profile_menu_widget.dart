@@ -41,7 +41,7 @@ class ProfileMenuWidget extends StatelessWidget {
         title,
         style: Theme.of(context).textTheme.bodySmall!.apply(
             color:
-                textColor), //la propriété apply est pour que si la couleur est fournie on l'applique
+                textColor,fontSizeDelta:bodySmall), //la propriété apply est pour que si la couleur est fournie on l'applique
       ),
       trailing: endIcon
           ? Container(

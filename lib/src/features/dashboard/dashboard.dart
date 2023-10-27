@@ -1,8 +1,6 @@
 import 'package:dotche/src/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/image_path.dart';
 
@@ -20,7 +18,7 @@ class Dashboard extends StatelessWidget {
           ),
           title: Text(
             "dashboard_appable".tr,
-            style: textTheme.titleMedium,
+            style: textTheme.titleMedium?.apply(fontSizeDelta: titleMedium),
           ),
           centerTitle: true,
           elevation: 0,
@@ -48,11 +46,11 @@ class Dashboard extends StatelessWidget {
                 // Heading
                 Text(
                   "dashboard_title".tr,
-                  style: textTheme.bodySmall,
+                  style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                 ),
                 Text(
                   "dashboard_header".tr,
-                  style: textTheme.titleLarge,
+                  style: textTheme.titleLarge?.apply(fontSizeDelta: titleLarge),
                 ),
                 SizedBox(
                   height: defaultSize,
@@ -71,7 +69,7 @@ class Dashboard extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .titleLarge
-                              ?.apply(color: Colors.grey.withOpacity(0.5)),
+                              ?.apply(color: Colors.grey.withOpacity(0.5),fontSizeDelta:titleLarge),
                         ),
                         Icon(
                           Icons.mic,
@@ -104,8 +102,8 @@ class Dashboard extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   "JS",
-                                  style: textTheme.bodyLarge
-                                      ?.apply(color: Colors.white),
+                                  style: textTheme.bodyMedium
+                                      ?.apply(color: Colors.white,fontSizeDelta:bodyMedium),
                                 ),
                               ),
                             ),
@@ -120,12 +118,12 @@ class Dashboard extends StatelessWidget {
                                 children: [
                                   Text(
                                     "dashboard_banner_title_2".tr,
-                                    style: textTheme.bodyLarge,
+                                    style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
                                     "dashboard_banner_subtitle".tr,
-                                    style: textTheme.bodySmall,
+                                    style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                                     overflow: TextOverflow.ellipsis,
                                   )
                                 ],
@@ -149,8 +147,8 @@ class Dashboard extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   "JS",
-                                  style: textTheme.bodyLarge
-                                      ?.apply(color: Colors.white),
+                                  style: textTheme.bodyMedium
+                                      ?.apply(color: Colors.white,fontSizeDelta:bodyMedium),
                                 ),
                               ),
                             ),
@@ -165,12 +163,12 @@ class Dashboard extends StatelessWidget {
                                 children: [
                                   Text(
                                     "dashboard_banner_title_2".tr,
-                                    style: textTheme.bodyLarge,
+                                    style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
                                     "dashboard_banner_subtitle".tr,
-                                    style: textTheme.bodySmall,
+                                    style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                                     overflow: TextOverflow.ellipsis,
                                   )
                                 ],
@@ -194,8 +192,8 @@ class Dashboard extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   "JS",
-                                  style: textTheme.bodyLarge
-                                      ?.apply(color: Colors.white),
+                                  style: textTheme.bodyMedium
+                                      ?.apply(color: Colors.white,fontSizeDelta:bodyMedium),
                                 ),
                               ),
                             ),
@@ -210,12 +208,12 @@ class Dashboard extends StatelessWidget {
                                 children: [
                                   Text(
                                     "dashboard_banner_title_2".tr,
-                                    style: textTheme.bodyLarge,
+                                    style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
                                     "dashboard_banner_subtitle".tr,
-                                    style: textTheme.bodySmall,
+                                    style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                                     overflow: TextOverflow.ellipsis,
                                   )
                                 ],
@@ -239,8 +237,8 @@ class Dashboard extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   "JS",
-                                  style: textTheme.bodyLarge
-                                      ?.apply(color: Colors.white),
+                                  style: textTheme.bodyMedium
+                                      ?.apply(color: Colors.white,fontSizeDelta:bodyMedium),
                                 ),
                               ),
                             ),
@@ -255,12 +253,12 @@ class Dashboard extends StatelessWidget {
                                 children: [
                                   Text(
                                     "dashboard_banner_title_2".tr,
-                                    style: textTheme.bodyLarge,
+                                    style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                   Text(
                                     "dashboard_banner_subtitle".tr,
-                                    style: textTheme.bodySmall,
+                                    style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                                     overflow: TextOverflow.ellipsis,
                                   )
                                 ],
@@ -291,10 +289,10 @@ class Dashboard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
+                          const Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
+                            children: [
                               Flexible(
                                   child: Image(
                                       width: 40,
@@ -312,13 +310,13 @@ class Dashboard extends StatelessWidget {
                           ),
                           Text(
                             "dashboard_banner_title_1".tr,
-                            style: textTheme.bodyLarge,
+                            style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
                             "dashboard_banner_subtitle".tr,
-                            style: textTheme.bodySmall,
+                            style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           )
@@ -341,11 +339,11 @@ class Dashboard extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: const [
+                                children: [
                                   Flexible(
                                       child: Image(
                                           width: 40,
@@ -360,13 +358,13 @@ class Dashboard extends StatelessWidget {
                               ),
                               Text(
                                 "dashboard_banner_title_2".tr,
-                                style: textTheme.bodyLarge,
+                                style: textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                               ),
                               Text(
                                 "dashboard_banner_subtitle".tr,
-                                style: textTheme.bodySmall,
+                                style: textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                               )
@@ -384,12 +382,12 @@ class Dashboard extends StatelessWidget {
                   ],
                 )
               ,  // top course
-                Text("dashboard_top_courses".tr,style: textTheme.bodyLarge?.apply(fontSizeFactor: 1.2),),//18*1.2
+                Text("dashboard_top_courses".tr,style: textTheme.bodyMedium?.apply(fontSizeFactor: 1.2),),//18*1.2
                 SizedBox(
                   width: 320,
                   height: 200,
                   child: Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(borderMiniCircular),color: ),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(borderMiniCircular),color: Colors.black),
                   ),
                 )
               ],

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'src/features/dashboard/dashboard.dart';
 import 'src/features/user_management/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'src/features/user_management/screens/forget_password/otp_screen.dart';
 import 'src/features/user_management/screens/login/login_screen.dart';
@@ -13,13 +12,12 @@ import 'src/features/user_management/screens/profile/update_profile_screen.dart'
 import 'src/features/user_management/screens/sign_up/signup_screen.dart';
 import 'src/utils/animation/animation_controller.dart';
 import 'src/utils/internationalisation/internationalisation.dart';
-import 'src/utils/service/api_client.dart';
 import 'src/utils/theme/theme.dart';
 
 void main() {
   // SystemChrome.setPreferredOrientations(
   //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  Get.put(ApiClient());
+  //Get.put(ApiClient());
   Get.put(TAnimationController());
   runApp(const MyApp());
 }
@@ -51,7 +49,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: const [Locale('fr'), Locale('en'), Locale('ge')],
         //themeMode: ThemeMode.system,
         title: 'Dotche',
-        home: Dashboard(),
+        home: Ouverture(),
         // home: const ProfileScreen(),
         getPages: [
           GetPage(
@@ -92,7 +90,6 @@ class MyApp extends StatelessWidget {
             transitionDuration: const Duration(milliseconds: 100),
           ),
         ],
-        //initialRoute: "/ouverture",
       );
     });
   }

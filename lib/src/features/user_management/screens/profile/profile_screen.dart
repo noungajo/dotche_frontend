@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         title: Text(
           "title_profile".tr,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleLarge?.apply(fontSizeDelta: titleLarge),
         ),
         centerTitle: true,
         actions: [
@@ -91,9 +91,9 @@ class ProfileScreen extends StatelessWidget {
                 height: defaultSize * 0.7,
               ),
               Text("profile_heading".tr,
-                  style: Theme.of(context).textTheme.titleLarge),
+                  style: Theme.of(context).textTheme.titleLarge?.apply(fontSizeDelta: titleLarge)),
               Text("profile_sub_heading".tr,
-                  style: Theme.of(context).textTheme.bodySmall),
+                  style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall)),
               SizedBox(
                 height: defaultSize,
               ),
@@ -113,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                         bottom: elevatedButton * 0.7),
                     child: Text(
                       "title_edith_profile".tr,
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.labelLarge?.apply(fontSizeDelta: labelLarge),
                     ),
                   ),
                 ),

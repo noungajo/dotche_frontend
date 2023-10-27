@@ -17,10 +17,10 @@ void buildSHowModalBottomSheet(BuildContext context) {
               children: [
                 Text(
                   "forget_pwd_title".tr,
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium),
                 ),
                 Text("forget_pwd_subtitle".tr,
-                    style: Theme.of(context).textTheme.bodySmall),
+                    style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall)),
                 SizedBox(
                   height: defaultSize,
                 ),

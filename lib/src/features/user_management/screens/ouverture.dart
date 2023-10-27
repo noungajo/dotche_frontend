@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../../constants/image_path.dart';
-import '../../../constants/numeric_value.dart';
 import '../../../constants/sizes.dart';
 import '../../../utils/animation/animation_controller.dart';
-import '../../../utils/animation/animation_position.dart';
-import '../../../utils/animation/t_animation.dart';
 import '../../../utils/user_session/storage.dart';
 
 /*

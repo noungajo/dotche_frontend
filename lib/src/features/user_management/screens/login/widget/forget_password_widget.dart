@@ -35,8 +35,8 @@ class ForgetPasswordBtnWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: Theme.of(context).textTheme.bodyMedium),
-              Text(subTitle, style: Theme.of(context).textTheme.bodySmall)
+              Text(title, style: Theme.of(context).textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium)),
+              Text(subTitle, style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall))
             ],
           ),
         ]),

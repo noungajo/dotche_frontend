@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Text(
                       "or".tr,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                       // style: bodyStyle,
                     ),
                     TextButton(
@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Text.rich(TextSpan(
                             text: "already_have_account".tr.toCapitalized(),
-                            style: Theme.of(context).textTheme.bodySmall,
+                            style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                             // style: bodyStyle,
                             children: [
                               TextSpan(

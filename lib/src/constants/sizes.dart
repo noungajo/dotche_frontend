@@ -16,3 +16,9 @@ double imageHeight = 20.h,
     iconSize = 5.w,
     marginAppBarRight = 4.w,
     marginAppBarTop = 1.h;
+
+double labelLarge = 11.sp,
+       titleLarge = 15.sp,
+       bodyMedium = 12.sp,
+       bodySmall = 11.sp,
+       titleMedium = 14.sp;

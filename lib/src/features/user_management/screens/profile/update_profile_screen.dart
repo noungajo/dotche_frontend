@@ -55,7 +55,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
         ),
         title: Text(
           "title_edith_profile".tr,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleLarge?.apply(fontSizeDelta: titleLarge),
         ),
         centerTitle: true,
       ),
@@ -115,7 +115,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                   Text("Photo de profil".tr,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .bodySmall),
+                                          .bodySmall?.apply(fontSizeDelta: bodySmall)),
                                   SizedBox(
                                     height: defaultSize,
                                   ),
@@ -213,7 +213,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                             bottom: elevatedButton * 0.7),
                         child: Text(
                           "title_edith_profile".tr,
-                          style: Theme.of(context).textTheme.labelLarge,
+                          style: Theme.of(context).textTheme.labelLarge?.apply(fontSizeDelta: labelLarge),
                         ),
                       ),
                     ),
@@ -226,11 +226,11 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     children: [
                       Text.rich(TextSpan(
                           text: '${"joined".tr} ',
-                          style: Theme.of(context).textTheme.bodySmall,
+                          style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall),
                           children: [
                             TextSpan(
                                 text: dateOfJoined,
-                                style: Theme.of(context).textTheme.bodyMedium)
+                                style: Theme.of(context).textTheme.bodyMedium?.apply(fontSizeDelta: bodyMedium))
                           ])),
                       ElevatedButton(
                         onPressed: () {},

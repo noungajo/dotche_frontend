@@ -14,7 +14,7 @@ class TAppTheme {
       elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
       //outlinedButtonTheme: TOulinedButtonTheme.lightOutlinedButtonTheme,
       inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
-      iconButtonTheme: TIconTheme.lighTIconTheme
+      iconTheme: TIconTheme.lighTIconTheme
 
       // floatingActionButtonTheme: FloatingActionButtonThemeData(),
       // elevatedButtonTheme:TElevated

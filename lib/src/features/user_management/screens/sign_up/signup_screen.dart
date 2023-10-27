@@ -49,7 +49,7 @@ bouton du style bordure. si on veut l'icon juste .icon c'est la même chose que 
                         child: Text.rich(TextSpan(children: [
                           TextSpan(
                               text: "alreadyHaveAnAccount".tr,
-                              style: Theme.of(context).textTheme.bodySmall),
+                              style: Theme.of(context).textTheme.bodySmall?.apply(fontSizeDelta: bodySmall)),
                           TextSpan(
                             text: " ${"login".tr}",
                           )
